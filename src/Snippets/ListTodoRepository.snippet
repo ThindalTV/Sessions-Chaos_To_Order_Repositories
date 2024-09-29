@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippet Format="1.0.0">
+<Header>
+<SnippetTypes>
+<SnippetType>Expansion</SnippetType>
+</SnippetTypes>
+<Title>ListTodoRepository</Title>
+<Author>CodePresenterGenerator</Author>
+<Description></Description><HelpUrl></HelpUrl>
+<Shortcut>ListTodoRepository</Shortcut>
+</Header>
+<Snippet>
+<Code Delimiter = "$"><![CDATA[public ListTodoRepository(ListExampleTodoSource todos) : base(todos) { }
+
+    public async IAsyncEnumerable<Todo> GetTodosByLaneId(string laneId, [EnumeratorCancellation] CancellationToken cancellationToken)
+    {
+        await Task.CompletedTask;
+        foreach (var todo in Source.Where(t => t.LaneId == laneId))
+        {
+            if (cancellationToken.IsCancellationRequested)
+                yield break;
+            yield return todo;
+        }
+    }
+
+    public async IAsyncEnumerable<Todo> GetTodosByPersonId(string personId, [EnumeratorCancellation] CancellationToken cancellationToken)
+    {
+        await Task.CompletedTask;
+        foreach (var todo in Source.Where(t => t.AssigneeId == personId))
+        {
+            if (cancellationToken.IsCancellationRequested)
+                yield break;
+            yield return todo;
+        }
+    }
+
+    public async IAsyncEnumerable<Todo> Search(string searchTerm, [EnumeratorCancellation] CancellationToken cancellationToken)
+    {
+        await Task.CompletedTask;
+        foreach (var todo in Source.Where(t => TodoMatchesSearch(t, searchTerm)))
+        {
+            if (cancellationToken.IsCancellationRequested)
+                yield break;
+            yield return todo;
+        }
+    }
+
+    private bool TodoMatchesSearch(Todo todo, string searchTerm)
+    {
+        if (todo.Title != null && todo.Description != null)
+        {
+            return todo.Title.Contains(searchTerm) || todo.Description.Contains(searchTerm);
+        }
+        return false;
+    }
+]]></Code>
+</Snippet>
+</CodeSnippet>
+</CodeSnippets>

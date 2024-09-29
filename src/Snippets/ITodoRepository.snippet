@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippet Format="1.0.0">
+<Header>
+<SnippetTypes>
+<SnippetType>Expansion</SnippetType>
+</SnippetTypes>
+<Title>ITodoRepository</Title>
+<Author>CodePresenterGenerator</Author>
+<Description></Description><HelpUrl></HelpUrl>
+<Shortcut>ITodoRepository</Shortcut>
+</Header>
+<Snippet>
+<Code Delimiter = "$"><![CDATA[    public IAsyncEnumerable<Todo> GetTodosByLaneId(string laneId, CancellationToken cancellationToken);
+    public IAsyncEnumerable<Todo> GetTodosByPersonId(string personId, CancellationToken cancellationToken);
+    public IAsyncEnumerable<Todo> Search(string searchTerm, CancellationToken cancellationToken);
+]]></Code>
+</Snippet>
+</CodeSnippet>
+</CodeSnippets>
