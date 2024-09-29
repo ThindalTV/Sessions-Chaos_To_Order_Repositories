@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippet Format="1.0.0">
+<Header>
+<SnippetTypes>
+<SnippetType>Expansion</SnippetType>
+</SnippetTypes>
+<Title>FakeUnitOfWork</Title>
+<Author>CodePresenterGenerator</Author>
+<Description></Description><HelpUrl></HelpUrl>
+<Shortcut>FakeUnitOfWork</Shortcut>
+</Header>
+<Snippet>
+<Code Delimiter = "$"><![CDATA[    public bool TransactionOpen { get; private set; }
+
+    private readonly List<IRepository> _repositories = new();
+
+    public async Task StartTransaction(CancellationToken cancellationToken)
+    {
+        await Task.CompletedTask;
+
+        // NOOP
+        TransactionOpen = true;
+    }
+
+    public async Task CommitTransaction(CancellationToken cancellationToken)
+    {
+        foreach(var repository in _repositories)
+        {
+            await repository.SaveChanges(cancellationToken);
+        }
+        TransactionOpen = false;
+    }
+
+    public async Task RollbackTransaction(CancellationToken cancellationToken)
+    {
+        await Task.CompletedTask;
+
+        // NOOP
+        TransactionOpen = false;
+    }
+
+    public async Task Attach(IRepository repository, CancellationToken cancellationToken)
+    {
+        await Task.CompletedTask;
+        _repositories.Add(repository);
+    }
+
+    public async Task Detach(IRepository repository, CancellationToken cancellationToken)
+    {
+        await Task.CompletedTask;
+
+        _repositories.Remove(repository);
+    }]]></Code>
+</Snippet>
+</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Final", "Final", "{3B7D283E-DFA6-445E-9654-3F571E9266E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{5DC4AA11-60C7-463C-804D-F866E036335A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{30DE6D0B-5454-41A0-B502-4302C67394E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Final.Repository", "Final\Final.Repository\Final.Repository.csproj", "{96BF22DD-AD69-4C1A-A52B-0F99CE72F039}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Repository", "Demo\Demo.Repository\Demo.Repository.csproj", "{8A9921B4-FA0A-447E-B0C7-C9A4C93EF083}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository.Data", "Shared\Repository.Data\Repository.Data.csproj", "{F2EC951C-0060-49A2-8BC1-4AA9AC2AC1D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Snippets", "Snippets", "{4010D8F2-24B1-4802-B6E6-E7311D5AA65F}"
+	ProjectSection(SolutionItems) = preProject
+		Snippets\BaseListRepository.snippet = Snippets\BaseListRepository.snippet
+		Snippets\FakeUnitOfWork.snippet = Snippets\FakeUnitOfWork.snippet
+		Snippets\IBaseRepository.snippet = Snippets\IBaseRepository.snippet
+		Snippets\IBaseRepositoryT.snippet = Snippets\IBaseRepositoryT.snippet
+		Snippets\ITodoRepository.snippet = Snippets\ITodoRepository.snippet
+		Snippets\IUnitOfWork.snippet = Snippets\IUnitOfWork.snippet
+		Snippets\ListTodoRepository.snippet = Snippets\ListTodoRepository.snippet
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96BF22DD-AD69-4C1A-A52B-0F99CE72F039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BF22DD-AD69-4C1A-A52B-0F99CE72F039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BF22DD-AD69-4C1A-A52B-0F99CE72F039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BF22DD-AD69-4C1A-A52B-0F99CE72F039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A9921B4-FA0A-447E-B0C7-C9A4C93EF083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A9921B4-FA0A-447E-B0C7-C9A4C93EF083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A9921B4-FA0A-447E-B0C7-C9A4C93EF083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A9921B4-FA0A-447E-B0C7-C9A4C93EF083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2EC951C-0060-49A2-8BC1-4AA9AC2AC1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2EC951C-0060-49A2-8BC1-4AA9AC2AC1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2EC951C-0060-49A2-8BC1-4AA9AC2AC1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2EC951C-0060-49A2-8BC1-4AA9AC2AC1D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{96BF22DD-AD69-4C1A-A52B-0F99CE72F039} = {3B7D283E-DFA6-445E-9654-3F571E9266E1}
+		{8A9921B4-FA0A-447E-B0C7-C9A4C93EF083} = {30DE6D0B-5454-41A0-B502-4302C67394E5}
+		{F2EC951C-0060-49A2-8BC1-4AA9AC2AC1D8} = {5DC4AA11-60C7-463C-804D-F866E036335A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B7B9AFD-445E-4D60-8421-2548EB799133}
+	EndGlobalSection
+EndGlobal

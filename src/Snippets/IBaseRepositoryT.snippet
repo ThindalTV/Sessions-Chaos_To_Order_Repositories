@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippet Format="1.0.0">
+<Header>
+<SnippetTypes>
+<SnippetType>Expansion</SnippetType>
+</SnippetTypes>
+<Title>IBaseRepositoryT</Title>
+<Author>CodePresenterGenerator</Author>
+<Description></Description><HelpUrl></HelpUrl>
+<Shortcut>IBaseRepositoryT</Shortcut>
+</Header>
+<Snippet>
+<Code Delimiter = "$"><![CDATA[IAsyncEnumerable<TObject> GetAll(int skip, int take, CancellationToken cancellationToken);
+    Task<TObject?> Get(string id, CancellationToken cancellationToken);
+    IAsyncEnumerable<TObject> Get(List<string> ids, CancellationToken cancellationToken);
+    Task<bool> Exists(string id, CancellationToken cancellationToken);
+    Task Untrack(TObject @object, CancellationToken cancellationToken);
+    Task Save(TObject @object, CancellationToken cancellationToken);
+    Task Delete(TObject @object, CancellationToken cancellationToken);
+    Task Update(TObject @object, CancellationToken cancellationToken);
+]]></Code>
+</Snippet>
+</CodeSnippet>
+</CodeSnippets>
