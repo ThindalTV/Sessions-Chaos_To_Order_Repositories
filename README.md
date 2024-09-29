@@ -8,6 +8,8 @@ In this beginner-friendly and code heavy session, we will break down the princip
 In the end, we will dive into some code examples and have a working, basic implementation of a repository with the necessary plumbing for your next application.
 
 ## Speaker
+- Eric Johansson, aka Thindal.
+  
 Eric has a broad experience that covers topics from ZX Basic to .NET. With projects spanning from business applications to nuclear power plant systems he developed the ability to adapt and evolve with the rapid changes in the tech landscape.
 
 That knowledge is something that he shares freely as a content creator and public speaker. Eric is passionate about making complex topics accessible to all level of learners, which you can see in his style of teaching in his livestreams, tutorials and conference sessions. Because of this, Eric has been recognized as a Progress Telerik Champion.
